@@ -45,6 +45,15 @@
       "filterable": 1
     },
     {
+      "key": "py_白嫖",
+      "name": "白嫖",
+      "type": 3,
+      "api": "https://raw.githubusercontent.com/liyk-master/PyramidStore/main/plugin/py_白嫖.py",
+      "searchable": 1,
+      "quickSearch": 1,
+      "filterable": 1
+    },
+    {
       "key": "fdsfdsfsd",
       "name": "测试服务器爬虫",
       "type": 4,
