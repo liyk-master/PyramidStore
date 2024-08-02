@@ -73,8 +73,7 @@ class Spider(Spider):  # 元类 默认的元类 type
             url = f'https://mjw21.com/{tid}'
         rsp = self.fetch(url)
         root = self.html(self.cleanText(rsp.text))
-        a_tag = root.xpath('//div[@class="pagination pagination-multi"]//a[text()="尾页"]')
-        a_tag = (a_tag[0].get('href') if a_tag else '')
+        a_tag = root.xpath('//div[@class="pagination pagination-multi"]//a[text()="尾页"]')[0].get('href')
         last_page = self.regStr(f"https://mjw21.com/all/page/(\\S+)", a_tag)
         aList = root.xpath("//article[@class='u-movie']")
         videos = []
