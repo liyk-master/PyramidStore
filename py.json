@@ -45,10 +45,10 @@
       "filterable": 1
     },
     {
-      "key": "py_白嫖",
-      "name": "白嫖",
+      "key": "py_mjw21",
+      "name": "91美剧网",
       "type": 3,
-      "api": "https://raw.githubusercontent.com/liyk-master/PyramidStore/main/plugin/py_白嫖.py",
+      "api": "https://raw.githubusercontent.com/liyk-master/PyramidStore/main/plugin/py_mjw21.py",
       "searchable": 1,
       "quickSearch": 1,
       "filterable": 1
