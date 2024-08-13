@@ -3,7 +3,7 @@
       "key": "py_meiju996",
       "name": "美剧996",
       "type": 3,
-      "api": "https://raw.githubusercontent.com/liyk-master/PyramidStore/main/plugin/py_meiju996.py",
+      "api": "http://123.56.114.55:6888/liyk-master/PyramidStore/main/plugin/py_meiju996.py",
       "searchable": 1,
       "quickSearch": 1,
       "filterable": 1
@@ -12,7 +12,7 @@
       "key": "py_动漫",
       "name": "动漫",
       "type": 3,
-      "api": "https://raw.githubusercontent.com/liyk-master/PyramidStore/main/plugin/py_动漫.py",
+      "api": "http://123.56.114.55:6888/liyk-master/PyramidStore/main/plugin/py_动漫.py",
       "searchable": 1,
       "quickSearch": 1,
       "filterable": 1
@@ -21,7 +21,7 @@
       "key": "py_黑料",
       "name": "黑料",
       "type": 3,
-      "api": "https://raw.githubusercontent.com/liyk-master/PyramidStore/main/plugin/py_黑料.py",
+      "api": "http://123.56.114.55:6888/liyk-master/PyramidStore/main/plugin/py_黑料.py",
       "searchable": 1,
       "quickSearch": 1,
       "filterable": 1
@@ -30,7 +30,7 @@
       "key": "py_94mt",
       "name": "94mt",
       "type": 3,
-      "api": "https://raw.githubusercontent.com/liyk-master/PyramidStore/main/plugin/py_94mt.py",
+      "api": "http://123.56.114.55:6888/liyk-master/PyramidStore/main/plugin/py_94mt.py",
       "searchable": 1,
       "quickSearch": 1,
       "filterable": 1
@@ -39,7 +39,7 @@
       "key": "py_hjkk",
       "name": "韩剧看看",
       "type": 3,
-      "api": "https://raw.githubusercontent.com/liyk-master/PyramidStore/main/plugin/py_hjkk.py",
+      "api": "http://123.56.114.55:6888/liyk-master/PyramidStore/main/plugin/py_hjkk.py",
       "searchable": 1,
       "quickSearch": 1,
       "filterable": 1
@@ -48,7 +48,7 @@
       "key": "py_mjw21",
       "name": "91美剧网",
       "type": 3,
-      "api": "https://raw.githubusercontent.com/liyk-master/PyramidStore/main/plugin/py_mjw21.py",
+      "api": "http://123.56.114.55:6888/liyk-master/PyramidStore/main/plugin/py_mjw21.py",
       "searchable": 1,
       "quickSearch": 1,
       "filterable": 1
