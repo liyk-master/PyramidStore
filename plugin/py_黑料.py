@@ -222,10 +222,10 @@ class Spider(Spider):
         result["header"] = headerx
         return result
 
-    def searchContent(self, key, quick):
-        return self.searchContentPage(key, quick, '1')
+    # def searchContent(self, key, quick):
+    #     return self.searchContentPage(key, quick, '1')
 
-    def searchContentPage(self, key, quick, page):
+    def searchContent(self, key, quick, page):
 
         result = {}
         videos = []
