@@ -276,17 +276,54 @@ class Spider(Spider):
             return {'list': [], 'msg': e}
         return {'list': video_list}
 
+    def hh(self,t):
+        # 定义映射字典
+        e = {
+            "00ooQ00": "a", "11bbR11": "b", "22ccS22": "c", "33ddT33": "d", "44eeU44": "e", "55ffV55": "f",
+            "66ggW66": "g", "77hhX77": "h", "88iiY88": "i", "99jjZ99": "j", "00kkA00": "k", "11llB11": "l",
+            "22mmC22": "m", "33nnD33": "n", "44ooE44": "o", "55ppF55": "p", "66qqG66": "q", "77rrH77": "r",
+            "88ssI88": "s", "99ttJ99": "t", "00uuK00": "u", "11vvL11": "v", "22wwM22": "w", "33xxN33": "x",
+            "44yyO44": "y", "55zzP55": "z", "00AAQ00": "A", "11BBR11": "B", "22CCS22": "C", "33DDT33": "D",
+            "44EEU44": "E", "55FFV55": "F", "66GGW66": "G", "77HHX77": "H", "88IIY88": "I", "99JJZ99": "J",
+            "00KKAA00": "K", "11LLBB11": "L", "22MMCC22": "M", "33NNDD33": "N", "44OOEE44": "O", "55PPFF55": "P",
+            "66QQGG66": "Q", "77RRHH77": "R", "88SSII88": "S", "99TTJJ99": "T", "00UUAA00": "U", "11VVBB11": "V",
+            "22WWCC22": "W", "33XXDD33": "X", "44YYEE44": "Y", "55ZZFF55": "Z"
+        }
+
+        # 解码 Base64 字符串
+        o = base64.b64decode(t).decode('utf-8')
+
+        # 初始化结果字符串
+        n = ""
+
+        # 遍历解码后的字符串
+        t = 0
+        while t < len(o):
+            l = o[t]
+            for k, v in e.items():
+                if o[t:t + len(k)] == k:
+                    l = v
+                    t += len(k) - 1
+                    break
+            n += l
+            t += 1
+
+        return n
+
     def playerContent(self, flag, pid, vipFlags):
         play_url = 'https://gitee.com/dobebly/my_img/raw/c1977fa6134aefb8e5a34dabd731a4d186c84a4d/x.mp4'
         try:
-            res = requests.get(f'https://dm84.org{pid}')
+            res = requests.get(f'https://dm84.org/p/{pid}-1-1.html')
             a_url = re.findall('iframe src="(.*?)"', res.text)[0]
             res1 = requests.get(a_url)
+            # print(res1.text)
+            # exit()
             url = re.findall('var url = "(.*?)"', res1.text)[0]
             t = re.findall('var t = "(.*?)"', res1.text)[0]
-            key = re.findall('var key = "(.*?)"', res1.text)[0]
+            base64_key = re.findall(r'var key = hh\("(.*?)"\)', res1.text)[0]
             act = re.findall('var act = "(.*?)"', res1.text)[0]
             play = re.findall('var play = "(.*?)"', res1.text)[0]
+            key = self.hh(base64_key)
             data = {
                 'url': url,
                 't': t,
