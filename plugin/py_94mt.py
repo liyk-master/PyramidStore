@@ -132,7 +132,7 @@ class Spider(Spider):  # 元类 默认的元类 type
         }
         return result
 
-    def searchContent(self, key, quick):
+    def searchContent(self, key, quick, page):
         url = 'https://www.94mt.cc/index.php/vod/search/page/1/wd/{0}.html'.format(key)
         headers = {
             'accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7',
@@ -200,13 +200,6 @@ class Spider(Spider):  # 元类 默认的元类 type
     header = {
         "User-Agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/100.0.4896.75 Safari/537.36"
     }
-    def parseCBC(self, enc, key, iv):
-        keyBytes = key.encode("utf-8")
-        ivBytes = iv.encode("utf-8")
-        cipher = AES.new(keyBytes, AES.MODE_CBC, ivBytes)
-        msg = cipher.decrypt(enc)
-        paddingLen = msg[len(msg) - 1]
-        return msg[0:-paddingLen]
 
     def playerContent(self, flag, id, vipFlags):
         url = id

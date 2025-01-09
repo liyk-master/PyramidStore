@@ -416,3 +416,9 @@ class Spider(Spider):  # 元类 默认的元类 type
 
     def localProxy(self, param):
         return [200, "video/MP2T", action, ""]
+
+    def destroy(self):
+        pass
+
+    def searchContentPage(self):
+        pass
