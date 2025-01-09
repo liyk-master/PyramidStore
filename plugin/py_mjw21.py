@@ -143,7 +143,7 @@ class Spider(Spider):  # 元类 默认的元类 type
         }
         return result
 
-    def searchContent(self, key, quick):
+    def searchContent(self, key, quick, page):
         url = f'https://mjw21.com/?s={key}'
         rsp = self.fetch(url)
         root = self.html(self.cleanText(rsp.text))

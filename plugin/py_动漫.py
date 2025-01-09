@@ -242,7 +242,7 @@ class Spider(Spider):
                     'vod_year': '',
                     'vod_area': '',
                     'vod_actor': '',
-                    'vod_director': '沐辰_为爱发电',
+                    'vod_director': 'liyk',
                     'vod_content': '',
                     'vod_play_from': vod_play_from,
                     'vod_play_url': '$$$'.join(vod_play_url)
@@ -255,10 +255,7 @@ class Spider(Spider):
             return {'list': [], 'msg': e}
         return {"list": video_list}
 
-    def searchContent(self, key, quick):
-        return self.searchContentPage(key, quick, '1')
-
-    def searchContentPage(self, keywords, quick, page):
+    def searchContent(self, keywords, quick, page):
         video_list = []
         try:
             res = requests.get(f'https://dm84.org/s----------.html?wd={keywords}')

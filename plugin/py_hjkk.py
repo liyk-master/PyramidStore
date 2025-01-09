@@ -27,10 +27,10 @@ class Spider(Spider):  # 元类 默认的元类 type
     def homeContent(self, filter):
         result = {}
         cateManual = {
-            "韩剧": "1",
-            "韩影": "2",
-            "韩综": "3",
-            "其他": "4",
+            "韩剧": "xvt1xv",
+            "韩影": "xvt2xv",
+            "韩综": "xvt3xv",
+            "其他": "xvt4xv",
             "推荐": "5",
             "泰剧": "6",
         }
@@ -134,7 +134,7 @@ class Spider(Spider):  # 元类 默认的元类 type
         }
         return result
 
-    def searchContent(self, key, quick):
+    def searchContent(self, key, quick, page):
         url = f'https://www.hanjukankan.com/search.php?searchword={key}'
         rsp = self.fetch(url)
         root = self.html(self.cleanText(rsp.text))

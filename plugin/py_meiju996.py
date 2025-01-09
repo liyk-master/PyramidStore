@@ -139,7 +139,7 @@ class Spider(Spider):  # 元类 默认的元类 type
         }
         return result
 
-    def searchContent(self, key, quick):
+    def searchContent(self, key, quick, page):
         url = 'http://www.meiju669.com/search.php?searchword={0}'.format(key)
         rsp = self.fetch(url)
         root = self.html(self.cleanText(rsp.text))
