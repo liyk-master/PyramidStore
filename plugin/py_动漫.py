@@ -313,7 +313,7 @@ class Spider(Spider):
     def playerContent(self, flag, pid, vipFlags):
         play_url = 'https://gitee.com/dobebly/my_img/raw/c1977fa6134aefb8e5a34dabd731a4d186c84a4d/x.mp4'
         try:
-            res = requests.get(f'https://dm84.org/p/{pid}-1-1.html')
+            res = requests.get(f'https://dm84.org{pid}')
             a_url = re.findall('iframe src="(.*?)"', res.text)[0]
             res1 = requests.get(a_url)
             # print(res1.text)
