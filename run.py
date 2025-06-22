@@ -9,25 +9,27 @@ def loadFromDisk(fileName):
     return sp
 
 def run(path,name):
+# def run(path,name,extend):
     rPath = path
     if len(name) > 0:
         rPath = 'plugin/py_{0}.py'.format(name)
     sp = loadFromDisk(rPath)
-    # sp.init(extend)  # 传递 extend 参数
+    sp.init()
     # res = sp.homeContent(True)
     # res = sp.homeVideoContent()
-    # res = sp.categoryContent(1,1,True,"")
-    # res = sp.detailContent([1475])
-    # res = sp.detailContent([1645])
-    # res = sp.playerContent("光速云","/play/729-0-0.html","")
-    res = sp.searchContent("甜蜜家园","",1)
+    # res = sp.categoryContent(13,1,True,"")
+    res = sp.detailContent(["muyiaau6fAfu"])
+    # res = sp.detailContent([15203])
+    # res = sp.detailContent(["/tianyi1/我的视频/电影/打黑"])
+    # res = sp.playerContent("线路1","723061197894259651|12350116506468","")
+    # res = sp.searchContent("风骚律师","",1)
     print(res)
 
 if __name__ == '__main__':
     parser = argparse.ArgumentParser(description='choose your crawler')
-    parser.add_argument('--path', type=str, default='plugin/py_hjkk.py')
-    parser.add_argument('--name', type=str, default='hjkk')
-    # parser.add_argument('--extend', type=str,default='{"server": "http://192.168.1.148:2345", "username": "liyk", "password": "jdmliyk1"}')
+    parser.add_argument('--path', type=str, default='plugin/py_94mt.py')
+    parser.add_argument('--name', type=str, default='94mt')
+    # parser.add_argument('--extend', type=str,default='{"server": "http://192.168.1.148:5244", "username": "admin", "password": "jdmliyk1"}')
     args = parser.parse_args()
     # run(args.path,args.name,args.extend)
     run(args.path,args.name)

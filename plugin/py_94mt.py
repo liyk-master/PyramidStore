@@ -89,9 +89,9 @@ class Spider(Spider):  # 元类 默认的元类 type
             })
         result['list'] = videos
         result['page'] = pg
-        result['pagecount'] = last_page
+        # result['pagecount'] = last_page
         result['limit'] = 30
-        result['total'] = 99999
+        result['total'] = 1000
         return result
 
     def detailContent(self, array):
